@@ -1,3 +1,16 @@
+//...
+document.addEventListener('visibilitychange',
+    function () {
+        if (document.visibilityState === "visible") {
+            document.title = "Portfolio | Alexffb";
+            $("#favicon").attr("href", "assets/img/favicon.png");
+        }
+        else {
+            document.title = "Come Back To Portfolio";
+            $("#favicon").attr("href", "assets/img/favhand.png");
+        }
+    });
+
 // Formspree code
 const form = document.getElementById("contact-form");
 
@@ -211,7 +224,7 @@ themeButton.addEventListener("click", () => {
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-  strings: ["Front-end","Back-end","Web","Software","Junior","Fullstack","Freelancer"],
+  strings: ["Software","Junior","Fullstack","Freelancer" ],
   smartBackspace: true,
   startDelay: 1000,
   typeSpeed: 130,
